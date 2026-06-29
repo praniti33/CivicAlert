@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CivicAlert Pune</title>
+    <script>
+      // Global flag to track Google Maps auth/billing failures
+      window.gm_authFailure_triggered = false;
+      window.gm_authFailure = function() {
+        console.warn("Google Maps authentication or billing failed. Activating PMC Schematic Fallback Map.");
+        window.gm_authFailure_triggered = true;
+        // Dispatch custom event to notify any mounted PuneMap components immediately
+        window.dispatchEvent(new CustomEvent('google-maps-auth-failure'));
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

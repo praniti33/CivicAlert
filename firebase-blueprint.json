@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "issue": {
+      "title": "Issue",
+      "description": "A civic issue reported in Pune",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string", "enum": ["Pothole", "Water Leakage", "Streetlight", "Garbage", "Other"] },
+        "description": { "type": "string" },
+        "location": { "type": "string" },
+        "severity": { "type": "string", "enum": ["Low", "Medium", "High"] },
+        "explanation": { "type": "string" },
+        "dateReported": { "type": "string" },
+        "status": { "type": "string", "enum": ["Reported", "In Progress", "Resolved"] },
+        "upvotes": { "type": "number" },
+        "beforeImage": { "type": "string" },
+        "afterImage": { "type": "string" },
+        "dateResolved": { "type": "string" },
+        "autoReply": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "department": { "type": "string", "enum": ["Roads", "Water", "Electricity", "Sanitation", "Unassigned"] },
+        "estimatedResolutionDate": { "type": "string" },
+        "comments": { "type": "array" }
+      },
+      "required": ["id", "category", "description", "location", "severity", "dateReported", "status", "upvotes"]
+    },
+    "user": {
+      "title": "User",
+      "description": "A registered user in CivicAlert Pune",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "username": { "type": "string" },
+        "password": { "type": "string" },
+        "role": { "type": "string", "enum": ["citizen", "admin"] },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" }
+      },
+      "required": ["id", "username", "password", "role", "name"]
+    },
+    "activity": {
+      "title": "Activity",
+      "description": "An action or interaction performed by a user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userRole": { "type": "string" },
+        "action": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "userId", "userName", "userRole", "action", "timestamp"]
+    }
+  },
+  "firestore": {
+    "issues/{issueId}": {
+      "schema": "issue",
+      "description": "Collection of all civic issues reported by citizens"
+    },
+    "users/{userId}": {
+      "schema": "user",
+      "description": "Collection of system logins for citizens and administrators"
+    },
+    "activities/{activityId}": {
+      "schema": "activity",
+      "description": "Log of actions performed by citizens and admins"
+    }
+  }
+}

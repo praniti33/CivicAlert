@@ -1,0 +1,6 @@
+{
+  "name": "CivicAlert",
+  "description": "CivicAlert is a hyperlocal community issue reporting web app where citizens can report, track, and resolve infrastructure issues like potholes, water leakage, broken streetlights, and garbage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
