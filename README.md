@@ -12,7 +12,7 @@ Community Hero.
 ---
 
 ## 🚀 Live Demo
-[Click here to view the deployed app](YOUR_DEPLOYED_LINK_HERE)
+[Click here to view the deployed app]https://civicalert-pune-1059842889109.us-west1.run.app/
 
 **Demo Credentials**
 | Role | Username | Password |
