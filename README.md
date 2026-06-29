@@ -1,20 +1,82 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# CivicAlert Pune 🛡️
+### Hyperlocal Real-Time Civic Issue Solver
 
-# Run and deploy your AI Studio app
+CivicAlert is a hyperlocal community issue reporting and resolution 
+platform that empowers Pune citizens to identify, report, and track 
+local infrastructure problems such as potholes, water leakages, broken 
+streetlights, and garbage issues.
 
-This contains everything you need to run your app locally.
+Built for the BlockseBlock Hackathon 2026 — Problem Statement 2: 
+Community Hero.
 
-View your app in AI Studio: https://ai.studio/apps/7a129e2f-32ec-4065-a177-92d0fc955569
+---
 
-## Run Locally
+## 🚀 Live Demo
+[Click here to view the deployed app](YOUR_DEPLOYED_LINK_HERE)
 
-**Prerequisites:**  Node.js
+**Demo Credentials**
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | admin | adminpassword |
+| Citizen | ramesh | password123 |
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📋 Features
+
+### Citizen Side
+- Photo-based issue reporting with drag and drop upload
+- Interactive Leaflet map with pin drop for exact location
+- Gemini AI auto-categorisation and severity assessment
+- Duplicate issue detection before submission
+- Personalised AI-generated auto-reply with resolution timeline
+- Real-time issue dashboard with search and filters
+- Issue upvoting and comment threads
+- Status change notifications
+- WhatsApp sharing on any issue
+
+### Admin Side
+- Secure admin login and full issue management dashboard
+- Status management — Reported → In Progress → Resolved
+- Before and after photo comparison for resolved issues
+- Department assignment and estimated resolution dates
+- Bulk status update for multiple issues
+- AI Insights — community summary, neighbourhood heatmap, directives
+- AI Agent auto-prioritisation of all open issues
+- Weekly AI Digest — government-style municipal briefing report
+- KPI analytics dashboard with charts
+- Real-time system activity audit log
+
+### Agentic AI Features
+- Multimodal photo analysis — Gemini detects issue from photo and pre-fills form
+- Smart duplicate merger — auto-groups related reports into a master issue
+- Auto-escalation — escalates unresolved issues after 3 days automatically
+- Predictive forecasting — predicts upcoming issues by neighbourhood
+- Auto-department routing — assigns issues to correct department on submission
+- Autonomous weekly patrol — auto-scans all issues on admin login
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Google AI Studio | App development and deployment platform |
+| Gemini API (gemini-1.5-flash) | Core AI layer for all intelligent features |
+| Firebase Firestore | Real-time database for issues, users, activity logs |
+| Leaflet + OpenStreetMap | Interactive map with issue pins and pin drop |
+| Recharts | Analytics charts in admin dashboard |
+| HTML / CSS / JavaScript | Frontend |
+
+---
+
+## 🤖 Google Technologies Used
+- **Google AI Studio** — primary build and deployment platform
+- **Gemini API** — multimodal analysis, categorisation, severity triage,
+duplicate detection, auto-reply, escalation, forecasting, routing,
+insights, prioritisation, weekly digest
+- **Firebase Firestore** — real-time NoSQL database
+
+---
+
+## 📁 Project Structure
